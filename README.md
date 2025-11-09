@@ -83,7 +83,7 @@ igallery.html
 
 
 ## OUTPUT
-c:\Users\admin\Pictures\Screenshots\Screenshot 2025-11-09 193935.png
+Image_Gallery/image.png
 
 
 ## RESULT
