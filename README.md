@@ -31,61 +31,131 @@ Publish the website in the given URL.
 
 ## PROGRAM
 ```
-igallery.html
+gallery.html
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Image Gallery</title>
-</head>
-<body>
-    <header style="text-align: center; background-color: #9dc800; color: white; padding: 1rem 0;">
-        <h1>FRUITS</h1>
-    </header>
-
-    <div style="white-space: nowrap; overflow-x: auto; padding: 1rem;">
-        <div style="display: inline-block; margin-right: 10px;" onclick="openModal(this)">
-            <img src="c:\Users\admin\Pictures\Screenshots\Screenshot 2025-11-09 193535.png" style="height: 200px;">
-        </div>
-        <div style="display: inline-block; margin-right: 10px;" onclick="openModal(this)">
-            <img src="c:\Users\admin\Pictures\Screenshots\Screenshot 2025-11-09 193607.png" style="height: 200px;">
-        </div>
-        <div style="display: inline-block; margin-right: 10px;" onclick="openModal(this)">
-            <img src="c:\Users\admin\Pictures\Screenshots\Screenshot 2025-11-09 193642.png" style="height: 200px;">
-        </div>
-        <div style="display: inline-block;" onclick="openModal(this)">
-            <img src="c:\Users\admin\Pictures\Screenshots\Screenshot 2025-11-09 193713.png" style="height: 200px;">
-        </div>
-    </div>
-
-    <div id="modal" style="display: none; position: fixed; z-index: 1; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.9);">
-        <span style="position: absolute; top: 15px; right: 35px; color: white; font-size: 40px; font-weight: bold; cursor: pointer;" onclick="closeModal()">&times;</span>
-        <img id="modalImage" style="display: block; margin: 5% auto; max-width: 80%;">
-    </div>
-
-    <script>
-        function openModal(element) {
-            var modal = document.getElementById("modal");
-            var modalImg = document.getElementById("modalImage");
-            modal.style.display = "block";
-            modalImg.src = element.querySelector("img").src;
+    <title>ART GALLERY</title>
+    <style>
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-image: url("imagegallery.jpg");
+            background-size: cover;  
+            background-position: center;
+            background-attachment: fixed;   
+            background-repeat: no-repeat;
         }
 
+        h1 {
+            margin-top: 20px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .gallery img {
+            width: 350px;
+            height: 250px;
+            border: 6px solid #000000;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal img {
+            max-width: 90%;
+            max-height: 90%;
+            border: 4px solid rgb(1, 1, 1);
+            border-radius: 10px;
+        }
+
+        .modal span {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1><u>ART GALLERY</u></h1>
+    <div class="gallery">
+        <img src="c:\Users\admin\Pictures\Screenshots\Screenshot 2025-11-15 220810.png" alt="Image 1" onclick="openModal(this)">
+        <img src="c:\Users\admin\Pictures\Screenshots\Screenshot 2025-11-15 220831.png" alt="Image 2" onclick="openModal(this)">
+        <img src="c:\Users\admin\Pictures\Screenshots\Screenshot 2025-11-15 220917.png" alt="Image 3" onclick="openModal(this)">
+        <img src="c:\Users\admin\Pictures\Screenshots\Screenshot 2025-11-15 220904.png" alt="Image 1" onclick="openModal(this)">
+        
+    </div>
+
+
+    <div class="modal" id="imageModal">
+        <span onclick="closeModal()">&times;</span>
+        <img id="modalImage" src="" alt="">
+    </div>
+
+    <footer>
+      &copy; 2025 designed by JANANI S. All Rights Reserved.
+    </footer>
+
+    <script>
+        
+        function openModal(image) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            modal.style.display = 'flex';
+            modalImg.src = image.src;
+        }
+
+    
         function closeModal() {
-            document.getElementById("modal").style.display = "none";
+            const modal = document.getElementById('imageModal');
+            modal.style.display = 'none';
         }
     </script>
 </body>
 </html>
 
-
+```
 
 ## OUTPUT
-```
-![alt text](image-2.png)
-```
+![alt text](<Screenshot 2025-11-15 224722.png>)
+![alt text](<Screenshot 2025-11-15 224751.png>)
+![alt text](<Screenshot 2025-11-15 224808.png>)
+![alt text](<Screenshot 2025-11-15 224824.png>)
+![alt text](<Screenshot 2025-11-15 224838.png>)
 
 ## RESULT
   The program for designing an interactive image gallery using HTML, CSS and JavaScript is executed successfully.
