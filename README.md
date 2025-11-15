@@ -83,7 +83,8 @@ igallery.html
 
 
 ## OUTPUT
-Image_Gallery/image.png
+
+![alt text](image-1.png)
 
 
 ## RESULT
