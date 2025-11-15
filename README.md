@@ -83,8 +83,7 @@ igallery.html
 
 
 ## OUTPUT
-
-![alt text](image-1.png)
+c:\Users\admin\Pictures\Screenshots\Screenshot 2025-11-09 193935.png
 
 
 ## RESULT
