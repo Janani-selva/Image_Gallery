@@ -83,8 +83,9 @@ igallery.html
 
 
 ## OUTPUT
-c:\Users\admin\Pictures\Screenshots\Screenshot 2025-11-09 193935.png
-
+```
+![alt text](image-2.png)
+```
 
 ## RESULT
   The program for designing an interactive image gallery using HTML, CSS and JavaScript is executed successfully.
